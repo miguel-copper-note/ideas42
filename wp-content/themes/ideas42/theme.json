@@ -129,5 +129,19 @@
         }
       ]
     }
-  }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header",
+      "tagName": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer",
+      "tagName": "footer"
+    }
+  ]
 }

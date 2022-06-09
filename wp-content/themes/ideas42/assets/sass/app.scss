@@ -7,14 +7,50 @@
 @import "home";
 @import "blocks/section";
 
-.wp-block-cover.object-none img.wp-block-cover__image-background {
-  object-fit: none;
-}
+@layer utilities {
+	.wp-block-cover.object-none img.wp-block-cover__image-background {
+	object-fit: none;
+	}
 
-.-mt-50 {
-  margin-top: -40px !important;
-}
+	.-mt-50 {
+	margin-top: -40px !important;
+	}
 
-.z-10 {
-  z-index: 10;
+	.z-10 {
+	z-index: 10;
+	}
+
+	.down-arrow {
+		background-image: url("../../images/down-arrow.svg");
+	}
+
+	.bg-hero {
+		background-image: url("../../images/hero.svg");
+	}
+
+	.text-rows {
+		@apply text-[33px] pb-18;
+
+		> li {
+			@apply leading-[2.96] mb-4;
+
+			@media (max-width: 1439px) {
+				@apply inline;
+			}
+
+			> span {
+				@apply leading-[1.65] inline-block italic font-bold pl-2 pr-3 mx-2;
+			}
+		}
+
+		> li:nth-child(1n) > span {
+			@apply bg-navy text-white;
+		}
+		> li:nth-child(2n) > span {
+			@apply bg-dark-green text-white;
+		}
+		> li:nth-child(3n) > span {
+			@apply bg-lime-green text-theme-gray;
+		}
+	}
 }

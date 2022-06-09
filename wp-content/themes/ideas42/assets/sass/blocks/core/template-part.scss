@@ -1,0 +1,35 @@
+.wp-block-template-part.is-header {
+
+}
+
+.wp-block-template-part.is-home-nav {
+	.wp-block-navigation__container {
+		@apply space-y-4 text-[15px]; // font-semibold;
+
+		> .wp-block-navigation-item:first-child {
+			@apply uppercase text-dark-green underline;
+		}
+	}
+
+	.wp-block-navigation-item {
+		@apply flex-wrap;
+	}
+
+	.wp-block-navigation-submenu__toggle,
+	.wp-block-navigation-link {
+		@apply text-navy ;
+	}
+
+	// .wp-block-navigation .has-child :where(.wp-block-navigation__submenu-container)
+	.wp-block-navigation .wp-block-navigation__submenu-container {
+		@apply static opacity-100 visible w-full h-auto bg-transparent border-0 mt-5 ml-3;
+
+		.wp-block-navigation-link {
+			@apply text-[12px] mb-1;
+		}
+
+		.wp-block-navigation-item__content {
+			@apply p-0 font-normal text-black;
+		}
+	}
+}
