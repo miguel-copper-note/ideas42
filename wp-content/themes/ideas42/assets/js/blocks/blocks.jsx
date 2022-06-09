@@ -2,6 +2,7 @@
  * External Dependencies
  */
 import "./container";
+import "./header";
 import "./spacer";
 import {
   addFontFamilyAttrs,
