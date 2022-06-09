@@ -4,6 +4,7 @@ const path = require('path');
 const mix = require('laravel-mix');
 
 mix
+  .js('assets/js/app.js', 'assets/dist/js')
   .js('assets/js/blocks/blocks.jsx', 'assets/dist/js')
   .react()
   .sass('assets/sass/app.scss', 'assets/dist/css')

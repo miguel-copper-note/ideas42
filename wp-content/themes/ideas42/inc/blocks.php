@@ -67,19 +67,23 @@ function ideas42_enqueue_block_styles() {
 	wp_enqueue_block_style( 'nclud/header', [ 'handle' => 'ideas42-block-nclud-header', 'src' => get_theme_file_uri( "assets/dist/css/blocks/core/template-part.css" ) ] );
 }
 
+function ideas42_register_block( $name ) {
+	acf_register_block_type( array(
+		'name' => $name,
+		'title' => __( $name ),
+		'description' => '',
+		'render_template' => "template-parts/blocks/$name.php",
+		'enqueue_style' => "assets/dist/css/blocks/ideas42/$name.css",
+		'category' => 'theme',
+		'icon' => 'layout',
+		'keywords' => array( 'ideas42', 'theme', $name ),
+	) );
+}
+
 function ideas42_register_blocks() {
 	if (! function_exists('acf_register_block_type')) {
 		return;
 	}
 
-	acf_register_block_type(array(
-		'name' => 'header',
-		'title' => __('Header'),
-		'description' => __('Home Header'),
-		'render_template' => 'template-parts/blocks/header.php',
-		'enqueue_style' => 'block.css',
-		'category' => 'layout',
-		'icon' => 'format-image',
-		'keywords' => array('custom', 'block'),
-	));
+	ideas42_register_block( 'header' );
 }

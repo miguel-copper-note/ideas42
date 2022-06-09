@@ -38,9 +38,11 @@ function ideas42_scripts() {
 
 	wp_register_script( 'alpinejs-collapse-defer', 'https://unpkg.com/@alpinejs/collapse@3.10.2/dist/cdn.min.js', null, true ); // phpcs:ignore
 	wp_register_script( 'alpinejs-defer', 'https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js', null, true ); // phpcs:ignore
+	wp_register_script( 'app-defer', get_template_directory_uri() . '/assets/dist/js/app.js', null, true ); // phpcs:ignore
 
 	wp_enqueue_script( 'alpinejs-collapse-defer' );
 	wp_enqueue_script( 'alpinejs-defer' );
+	wp_enqueue_script( 'app-defer' );
 }
 
 /**

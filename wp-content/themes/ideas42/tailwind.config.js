@@ -37,6 +37,7 @@ module.exports = {
       lineHeight: generateSpacing(360),
       maxWidth: generateSpacing(360),
       minHeight: generateSpacing(360),
+      minWidth: generateSpacing(360),
       spacing: generateSpacing(360),
     },
   },
