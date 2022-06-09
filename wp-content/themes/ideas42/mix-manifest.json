@@ -1,6 +1,8 @@
 {
     "/assets/dist/js/blocks.js": "/assets/dist/js/blocks.js",
+    "/assets/dist/css/blocks/core/site-logo.css": "/assets/dist/css/blocks/core/site-logo.css",
     "/assets/dist/css/fonts.css": "/assets/dist/css/fonts.css",
     "/assets/dist/css/editor.css": "/assets/dist/css/editor.css",
-    "/assets/dist/css/app.css": "/assets/dist/css/app.css"
+    "/assets/dist/css/app.css": "/assets/dist/css/app.css",
+    "/assets/dist/css/blocks/core/template-part.css": "/assets/dist/css/blocks/core/template-part.css"
 }
