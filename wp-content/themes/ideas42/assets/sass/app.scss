@@ -10,11 +10,44 @@
 .wp-block-cover.object-none img.wp-block-cover__image-background {
   object-fit: none;
 }
-
 .-mt-50 {
   margin-top: -40px !important;
 }
-
 .z-10 {
   z-index: 10;
+}
+.inline-block {
+  display: inline-block;
+}
+.tag {
+  display: inline-block;
+  width: auto !important;
+  position: relative;
+}
+.spotlight {
+  position: absolute !important;
+  left: 20px;
+  top: -20px;
+  z-index: 10;
+}
+.wp-block-group {
+  position: relative;
+}
+:where(.wp-block-group.has-background) {
+  padding: 0;
+}
+
+.wp-block-media-text {
+  gap: 40px;
+
+  .wp-block-media-text__content {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 781px) {
+  .md-justify-center {
+    display: flex;
+    justify-content: center;
+  }
 }

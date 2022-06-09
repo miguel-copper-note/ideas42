@@ -359,6 +359,16 @@ var _wp$components = wp.components,
     UnitControl = _wp$components.__experimentalUnitControl; //restrict to specific block names
 
 var allowedBlocks = ["core/group", "core/column", "core/columns"];
+
+function clean(obj) {
+  for (var propName in obj) {
+    if (obj[propName] === null || obj[propName] === undefined || obj[propName] === "") {
+      delete obj[propName];
+    }
+  }
+
+  return obj;
+}
 /**
  * Add custom attribute for Font Family
  *
@@ -366,6 +376,7 @@ var allowedBlocks = ["core/group", "core/column", "core/columns"];
  *
  * @return {Object} settings Modified settings.
  */
+
 
 var addLayouts = function addLayouts(settings) {
   if (allowedBlocks.includes(settings.name)) {
@@ -421,6 +432,7 @@ var applyLayoutsStyles = function applyLayoutsStyles(props, blockType, attribute
     rowGap: rowGap,
     columnGap: columnGap
   });
+  clean(props.style);
 };
 
 var addLayoutClass = function addLayoutClass(props) {
@@ -440,6 +452,7 @@ var addLayoutClass = function addLayoutClass(props) {
       rowGap: rowGap,
       columnGap: columnGap
     });
+    clean(props.style);
   }
 };
 /**

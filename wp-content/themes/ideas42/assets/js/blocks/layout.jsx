@@ -12,6 +12,19 @@ const {
 //restrict to specific block names
 const allowedBlocks = ["core/group", "core/column", "core/columns"];
 
+function clean(obj) {
+  for (var propName in obj) {
+    if (
+      obj[propName] === null ||
+      obj[propName] === undefined ||
+      obj[propName] === ""
+    ) {
+      delete obj[propName];
+    }
+  }
+  return obj;
+}
+
 /**
  * Add custom attribute for Font Family
  *
@@ -71,6 +84,7 @@ const applyLayoutsStyles = (props, blockType, attributes) => {
       columnGap,
     },
   };
+  clean(props.style);
 };
 
 const addLayoutClass = (props) => {
@@ -90,6 +104,7 @@ const addLayoutClass = (props) => {
         columnGap,
       },
     };
+    clean(props.style);
   }
 };
 

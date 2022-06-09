@@ -1503,3 +1503,8 @@ Stack trace:
 [08-Jun-2022 20:18:19 UTC] PHP Notice:  Error when decoding a JSON file at path /Users/wanmigs/Documents/Outliant/ideas42/wp-content/themes/twentytwentytwo/styles/swiss.json: Syntax error in /Users/wanmigs/Documents/Outliant/ideas42/wp-includes/functions.php on line 4548
 [08-Jun-2022 21:25:02 UTC] PHP Notice:  Array to string conversion in /Users/wanmigs/Documents/Outliant/ideas42/wp-content/themes/ideas42/index.php on line 16
 [08-Jun-2022 21:30:18 UTC] PHP Fatal error:  Cannot redeclare do_blocks() (previously declared in /Users/wanmigs/Documents/Outliant/ideas42/wp-includes/blocks.php:934) in /Users/wanmigs/Documents/Outliant/ideas42/wp-content/themes/ideas42/index.php on line 20
+[09-Jun-2022 07:57:02 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /Users/wanmigs/Documents/Outliant/ideas42/wp-content/themes/ideas42/inc/template-functions.php on line 77
+[09-Jun-2022 07:57:02 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /Users/wanmigs/Documents/Outliant/ideas42/wp-content/themes/ideas42/inc/template-functions.php on line 77
+[09-Jun-2022 07:57:02 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /Users/wanmigs/Documents/Outliant/ideas42/wp-content/themes/ideas42/inc/template-functions.php on line 77
+[09-Jun-2022 07:57:02 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/wanmigs/Documents/Outliant/ideas42/wp-includes/class-wp-recovery-mode-email-service.php on line 371
+[09-Jun-2022 07:57:02 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Users/wanmigs/Documents/Outliant/ideas42/wp-includes/class-wp-recovery-mode-email-service.php on line 372

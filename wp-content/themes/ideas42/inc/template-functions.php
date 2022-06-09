@@ -5,7 +5,7 @@ add_action( 'wp_enqueue_scripts', 'ideas42_scripts', 9999 );
 add_action( 'after_setup_theme', 'ideas42_support' );
 
 add_filter( 'script_loader_tag', 'ideas42_add_asyncdefer_attribute', 10, 2 );
-// add_filter( 'style_loader_tag', 'ideas42_preload_filter', 10, 2 );
+add_filter( 'style_loader_tag', 'ideas42_preload_filter', 10, 2 );
 
 
 /**
