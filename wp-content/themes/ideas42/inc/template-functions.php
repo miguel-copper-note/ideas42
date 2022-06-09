@@ -3,6 +3,7 @@
 
 add_action( 'wp_enqueue_scripts', 'ideas42_scripts', 9999 );
 add_action( 'after_setup_theme', 'ideas42_support' );
+add_action( 'after_setup_theme', 'register_menus' );
 
 add_filter( 'script_loader_tag', 'ideas42_add_asyncdefer_attribute', 10, 2 );
 // add_filter( 'style_loader_tag', 'ideas42_preload_filter', 10, 2 );
@@ -84,6 +85,11 @@ function ideas42_support() {
 		// Enqueue editor styles.
 		// add_editor_style( 'style.css' );
     add_theme_support( 'block-templates' );
-
+    add_theme_support( 'menus' );
+    add_theme_support( 'custom-logo' );
 
 	}
+
+function register_menus() {
+	register_nav_menu( 'primary', __( 'Primary Menu', 'ideas42' ) );
+}
