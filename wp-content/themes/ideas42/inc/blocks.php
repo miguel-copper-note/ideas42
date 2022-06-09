@@ -3,6 +3,7 @@
 add_action( 'enqueue_block_editor_assets', 'ideas42_gutenberg_enqueue_scripts' );
 add_action( 'after_setup_theme', 'ideas42_remove_patterns' );
 add_action( 'after_setup_theme', 'ideas42_enqueue_block_styles' );
+add_action( 'acf/init', 'ideas42_register_blocks' );
 
 /**
  * Enqueue custom gutenberg blocks scripts and styles for Editor only.
@@ -23,7 +24,7 @@ function ideas42_gutenberg_enqueue_scripts() {
 			'wp-compose',
 			'wp-editor',
 			'wp-element',
-      'wp-hooks',
+			'wp-hooks',
 		),
 		ideas42_asset_version( get_template_directory() . '/assets/dist/css/blocks.js' ),
 		true
@@ -64,4 +65,21 @@ function ideas42_enqueue_block_styles() {
 	}
 
 	wp_enqueue_block_style( 'nclud/header', [ 'handle' => 'ideas42-block-nclud-header', 'src' => get_theme_file_uri( "assets/dist/css/blocks/core/template-part.css" ) ] );
+}
+
+function ideas42_register_blocks() {
+	if (! function_exists('acf_register_block_type')) {
+		return;
+	}
+
+	acf_register_block_type(array(
+		'name' => 'header',
+		'title' => __('Header'),
+		'description' => __('Home Header'),
+		'render_template' => 'template-parts/blocks/header.php',
+		'enqueue_style' => 'block.css',
+		'category' => 'layout',
+		'icon' => 'format-image',
+		'keywords' => array('custom', 'block'),
+	));
 }
