@@ -1,0 +1,80 @@
+@layer base {
+  body,
+  html,
+  .ideas42,
+  .block-editor-block-list__layout {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: Gibson;
+    --wp--style--block-gap: 0;
+  }
+
+  .container {
+    max-width: 1092px;
+    @apply mx-auto px-[1.25rem] xxl:px-0;
+  }
+  .text-h1 {
+    font-size: toRem(64);
+    line-height: toRem(78.14);
+    font-weight: 700;
+  }
+  .text-h2 {
+    font-size: toRem(48);
+    line-height: toRem(58.61);
+    font-weight: 700;
+  }
+  .text-h3 {
+    font-size: toRem(36);
+    line-height: toRem(43.96);
+    font-weight: 700;
+  }
+  .text-h4 {
+    font-size: toRem(24);
+    line-height: toRem(29.3);
+    font-weight: 700;
+  }
+  .text-h5 {
+    font-size: toRem(18);
+    line-height: toRem(21.98);
+    font-weight: 700;
+  }
+  h1,
+  html :where(.editor-styles-wrapper) .block-editor-block-list__layout h1 {
+    @apply text-h1;
+  }
+  h2,
+  html :where(.editor-styles-wrapper) .block-editor-block-list__layout h2 {
+    @apply text-h2;
+  }
+  h3,
+  html :where(.editor-styles-wrapper) .block-editor-block-list__layout h3 {
+    @apply text-h3;
+  }
+  h4,
+  html :where(.editor-styles-wrapper) .block-editor-block-list__layout h4 {
+    @apply text-h4;
+  }
+  h5,
+  html :where(.editor-styles-wrapper) .block-editor-block-list__layout h5 {
+    @apply text-h5;
+  }
+  .spacer-xs {
+    padding-top: toRem(30);
+    padding-bottom: toRem(30);
+  }
+  .spacer-sm {
+    padding-top: toRem(80);
+    padding-bottom: toRem(80);
+  }
+  .spacer-md {
+    padding-top: toRem(100);
+    padding-bottom: toRem(100);
+  }
+  .spacer-lg {
+    padding-top: toRem(160);
+    padding-bottom: toRem(160);
+  }
+  .text-permanent-marker {
+    font-family: "Permanent-Marker";
+  }
+}

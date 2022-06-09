@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "functions";
+@import "base";
+@import "home";
+@import "blocks/section";
+
+.wp-block-cover.object-none img.wp-block-cover__image-background {
+  object-fit: none;
+}
+
+.-mt-50 {
+  margin-top: -40px !important;
+}
+
+.z-10 {
+  z-index: 10;
+}

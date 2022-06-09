@@ -379,6 +379,115 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
+  body,
+html,
+.ideas42,
+.block-editor-block-list__layout {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: Gibson;
+    --wp--style--block-gap: 0;
+  }
+
+  .container {
+    max-width: 1092px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 1120px) {
+
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+  .text-h1 {
+    font-size: 4rem;
+    line-height: 4.88375rem;
+    font-weight: 700;
+  }
+
+  .text-h2 {
+    font-size: 3rem;
+    line-height: 3.663125rem;
+    font-weight: 700;
+  }
+
+  .text-h3 {
+    font-size: 2.25rem;
+    line-height: 2.7475rem;
+    font-weight: 700;
+  }
+
+  .text-h4 {
+    font-size: 1.5rem;
+    line-height: 1.83125rem;
+    font-weight: 700;
+  }
+
+  .text-h5 {
+    font-size: 1.125rem;
+    line-height: 1.37375rem;
+    font-weight: 700;
+  }
+
+  h1, html :where(.editor-styles-wrapper) .block-editor-block-list__layout h1 {
+    font-size: 4rem;
+    line-height: 4.88375rem;
+    font-weight: 700;
+  }
+
+  h2, html :where(.editor-styles-wrapper) .block-editor-block-list__layout h2 {
+    font-size: 3rem;
+    line-height: 3.663125rem;
+    font-weight: 700;
+  }
+
+  h3, html :where(.editor-styles-wrapper) .block-editor-block-list__layout h3 {
+    font-size: 2.25rem;
+    line-height: 2.7475rem;
+    font-weight: 700;
+  }
+
+  h4, html :where(.editor-styles-wrapper) .block-editor-block-list__layout h4 {
+    font-size: 1.5rem;
+    line-height: 1.83125rem;
+    font-weight: 700;
+  }
+
+  h5, html :where(.editor-styles-wrapper) .block-editor-block-list__layout h5 {
+    font-size: 1.125rem;
+    line-height: 1.37375rem;
+    font-weight: 700;
+  }
+
+  .spacer-xs {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .spacer-sm {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .spacer-md {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .spacer-lg {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .text-permanent-marker {
+    font-family: "Permanent-Marker";
+  }
 
 *, ::before, ::after {
   --tw-translate-x: 0;
@@ -424,11 +533,90 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.visible {
+  visibility: visible;
 }
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
+.z-10 {
+  z-index: 10;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.block {
+  display: block;
+}
+.table {
+  display: table;
+}
+.contents {
+  display: contents;
+}
+.hidden {
+  display: none;
+}
+.border-collapse {
+  border-collapse: collapse;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.resize {
+  resize: both;
+}
+.border {
+  border-width: 1px;
+}
+.object-none {
+  -o-object-fit: none;
+     object-fit: none;
+}
+.px-\[1\.25rem\] {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.outline {
+  outline-style: solid;
+}
+.home h1 {
+  font-size: 3.875rem;
+  line-height: 3.875rem;
+  font-weight: 700;
+}
+.home h2 {
+  font-size: 3rem;
+  line-height: 3.75rem;
+  font-weight: 700;
+}
+.home h3 {
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  font-weight: 600;
+}
+.home h4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.home h5 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.wp-block-cover.object-none img.wp-block-cover__image-background {
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.-mt-50 {
+  margin-top: -40px !important;
+}
+
+.z-10 {
+  z-index: 10;
 }

@@ -1,0 +1,27 @@
+.home {
+  h1 {
+    font-size: toRem(62);
+    line-height: toRem(62);
+    font-weight: 700;
+  }
+  h2 {
+    font-size: toRem(48);
+    line-height: toRem(60);
+    font-weight: 700;
+  }
+  h3 {
+    font-size: toRem(36);
+    line-height: toRem(42);
+    font-weight: 600;
+  }
+  h4 {
+    font-size: toRem(28);
+    line-height: toRem(32);
+    font-weight: 700;
+  }
+  h5 {
+    font-size: toRem(24);
+    line-height: toRem(28);
+    font-weight: 600;
+  }
+}

@@ -27,7 +27,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body x-data="{ mobileNavOpen: false }" :class="{ 'overflow-hidden': mobileNavOpen }" <?php body_class( 'cambio' ); ?>>
+<body x-data="{ mobileNavOpen: false }" :class="{ 'overflow-hidden': mobileNavOpen }" <?php body_class( 'ideas42' ); ?>>
 
 <?php wp_body_open(); ?>
 

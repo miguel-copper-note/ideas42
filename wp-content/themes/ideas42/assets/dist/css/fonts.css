@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Permanent-Marker";
+  src: url("../../fonts/permanent-marker/PermanentMarker-Regular.ttf") format("truetype");
+  font-weight: 400t;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gibson";
+  src: url("../../fonts/gibson/Gibson-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gibson";
+  src: url("../../fonts/gibson/Gibson-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gibson";
+  src: url("../../fonts/gibson/Gibson-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gibson";
+  src: url("../../fonts/gibson/Gibson-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
