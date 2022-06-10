@@ -7,47 +7,108 @@
 @import "home";
 @import "blocks/section";
 
-.wp-block-cover.object-none img.wp-block-cover__image-background {
-  object-fit: none;
+@layer components {
+	.text-rows {
+		@apply text-[33px] pb-18;
+
+		> li {
+			@apply leading-[2.96] mb-4 flex flex-wrap gap-2 items-center;
+
+			@media (max-width: 1439px) {
+				@apply inline;
+			}
+		}
+
+		> li:nth-child(1n) .rotating-text {
+			@apply bg-navy text-white;
+		}
+
+		> li:nth-child(2n) .rotating-text {
+			@apply bg-dark-green text-white;
+		}
+
+		> li:nth-child(3n) .rotating-text {
+			@apply bg-lime-green text-theme-gray;
+		}
+	}
+
+	.rotating-text {
+		@apply leading-[1.65] inline-block italic font-bold h-[54.45px] text-center relative;
+
+		span {
+			@apply opacity-0 block h-0 transition transition-opacity duration-1000 pl-3 pr-4;
+
+			&.current {
+				@apply opacity-100;
+			}
+		}
+
+		&.active span {
+			@apply h-auto absolute left-1/2 transform -translate-x-1/2;
+		}
+	}
 }
-.-mt-50 {
-  margin-top: -40px !important;
-}
-.z-10 {
-  z-index: 10;
+
+@layer utilities {
+	.wp-block-cover.object-none img.wp-block-cover__image-background {
+		object-fit: none;
+	}
+
+	.-mt-50 {
+		margin-top: -40px !important;
+	}
+
+	.z-10 {
+		z-index: 10;
+	}
+
+	.down-arrow {
+		background-image: url("../../images/down-arrow.svg");
+	}
+
+	.bg-hero {
+		background-image: url("../../images/hero.svg");
+	}
+
+	.overflow-hidden {
+		overflow: hidden;
+	}
+
+	.flex-1 {
+		flex: 1;
+	}
 }
 .inline-block {
-  display: inline-block;
+	display: inline-block;
 }
 .tag {
-  display: inline-block;
-  width: auto !important;
-  position: relative;
+	display: inline-block;
+	width: auto !important;
+	position: relative;
 }
 .spotlight {
-  position: absolute !important;
-  left: 20px;
-  top: -20px;
-  z-index: 10;
+	position: absolute !important;
+	left: 20px;
+	top: -20px;
+	z-index: 10;
 }
 .wp-block-group {
-  position: relative;
+	position: relative;
 }
 :where(.wp-block-group.has-background) {
-  padding: 0;
+	padding: 0;
 }
-
 .wp-block-media-text {
-  gap: 40px;
+	gap: 40px;
 
-  .wp-block-media-text__content {
-    padding: 0 !important;
-  }
+	.wp-block-media-text__content {
+		padding: 0 !important;
+	}
 }
 
 @media (max-width: 781px) {
-  .md-justify-center {
-    display: flex;
-    justify-content: center;
-  }
+	.md-justify-center {
+		display: flex;
+		justify-content: center;
+	}
 }

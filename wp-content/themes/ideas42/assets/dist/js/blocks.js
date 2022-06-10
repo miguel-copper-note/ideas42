@@ -1,108 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/js/blocks/blocks.jsx":
-/*!*************************************!*\
-  !*** ./assets/js/blocks/blocks.jsx ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./container */ "./assets/js/blocks/container.jsx");
-/* harmony import */ var _spacer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./spacer */ "./assets/js/blocks/spacer.jsx");
-/* harmony import */ var _fontFamily__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fontFamily */ "./assets/js/blocks/fontFamily.jsx");
-/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout */ "./assets/js/blocks/layout.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-/**
- * External Dependencies
- */
-
-
-
-
-/**
- * WordPress Dependencies
- */
-
-
-
-var addFilter = wp.hooks.addFilter;
-var Fragment = wp.element.Fragment;
-var createHigherOrderComponent = wp.compose.createHigherOrderComponent;
-/**
- * Add custom attribute for mobile visibility.
- *
- * @param {Object} settings Settings for the block.
- *
- * @return {Object} settings Modified settings.
- */
-
-function addAttributes(settings) {
-  (0,_fontFamily__WEBPACK_IMPORTED_MODULE_2__.addFontFamilyAttrs)(settings);
-  (0,_layout__WEBPACK_IMPORTED_MODULE_3__.addLayouts)(settings);
-  console.log(settings);
-  return settings;
-}
-/**
- * Add custom controls on Block Panel.
- *
- * @param {function} BlockEdit Block edit component.
- *
- * @return {function} BlockEdit Modified block edit component.
- */
-
-
-var withInspectorControl = createHigherOrderComponent(function (BlockEdit) {
-  return function (props) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(BlockEdit, _objectSpread({}, props)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_fontFamily__WEBPACK_IMPORTED_MODULE_2__.FontFamilyBlockEdit, _objectSpread({}, props)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_layout__WEBPACK_IMPORTED_MODULE_3__.LayoutBlockEdit, _objectSpread({}, props))]
-    });
-  };
-}, "withInspectorControl");
-/**
- * Add custom element class in save element.
- *
- * @param {Object} props     Block element.
- * @param {Object} blockType      Blocks object.
- * @param {Object} attributes     Blocks attributes.
- *
- * @return {Object} extraProps Modified block element.
- */
-
-function applyExtraClass(props, blockType, attributes) {
-  (0,_fontFamily__WEBPACK_IMPORTED_MODULE_2__.applyFontFamilyClass)(props, blockType, attributes);
-  (0,_layout__WEBPACK_IMPORTED_MODULE_3__.applyLayoutsStyles)(props, blockType, attributes);
-  return props;
-}
-/**
- * Add size class to the block in the editor
- */
-
-
-var addExtraClass = createHigherOrderComponent(function (BlockListBlock) {
-  return function (props) {
-    (0,_fontFamily__WEBPACK_IMPORTED_MODULE_2__.addFontFamilyClass)(props);
-    (0,_layout__WEBPACK_IMPORTED_MODULE_3__.addLayoutClass)(props);
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(BlockListBlock, _objectSpread(_objectSpread({}, props), {}, {
-      wrapperProps: props
-    }));
-  };
-}, "withMyWrapperProp"); //add filters
-
-addFilter("blocks.registerBlockType", "nclud/custom-attributes", addAttributes);
-addFilter("editor.BlockEdit", "nclud/custom-advanced-control", withInspectorControl);
-addFilter("editor.BlockListBlock", "nclud/add-extra-class", addExtraClass);
-addFilter("blocks.getSaveContent.extraProps", "nclud/apply-extra-class", applyExtraClass);
-
-/***/ }),
-
 /***/ "./assets/js/blocks/container.jsx":
 /*!****************************************!*\
   !*** ./assets/js/blocks/container.jsx ***!
@@ -321,6 +219,165 @@ var FontFamilyBlockEdit = function FontFamilyBlockEdit(props) {
 };
 
 
+
+/***/ }),
+
+/***/ "./assets/js/blocks/header.jsx":
+/*!*************************************!*\
+  !*** ./assets/js/blocks/header.jsx ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+var InnerBlocks = wp.editor.InnerBlocks;
+var registerBlockType = wp.blocks.registerBlockType; // const { Fragment } = wp.element;
+
+var _wp$blockEditor = wp.blockEditor,
+    useBlockProps = _wp$blockEditor.useBlockProps,
+    RichText = _wp$blockEditor.RichText;
+var _wp$components = wp.components,
+    Button = _wp$components.Button,
+    PanelBody = _wp$components.PanelBody;
+var InspectorControls = wp.editor.InspectorControls;
+var TextControl = wp.components.TextControl;
+var useState = wp.element.useState;
+registerBlockType('nclud/header-rotating-text', {
+  title: 'Header Rotating Text',
+  description: '',
+  category: 'theme',
+  icon: 'layout',
+  attributes: {
+    items: {
+      type: 'array',
+      "default": ['Test']
+    }
+  },
+  edit: function edit(props) {
+    var items = props.attributes.items,
+        setAttributes = props.setAttributes,
+        className = props.className;
+    var blockProps = useBlockProps();
+
+    var onChangeItems = function onChangeItems(newItems) {
+      setAttributes({
+        items: newItems
+      });
+    };
+
+    var itemFields = items.map(function (item, i) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(TextControl, {
+        label: "Item ".concat(i),
+        value: item,
+        onChange: onChangeItems
+      });
+    });
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InspectorControls, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(PanelBody, {
+          title: "Items",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Button, {
+            isDefault: true,
+            onClick: function onClick() {},
+            children: "Add Item"
+          })
+        })
+      }), ",", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+        children: items ? items[0] : ''
+      })]
+    });
+  },
+  save: function save(props) {
+    var blockProps = useBlockProps.save();
+    return props.attributes.items;
+  }
+});
+registerBlockType('nclud/header', {
+  title: 'Header',
+  description: '',
+  category: 'theme',
+  icon: 'layout',
+  attributes: {
+    content: {
+      type: 'string',
+      source: 'attribute',
+      selector: 'p'
+    }
+  },
+  edit: function edit(props) {
+    var content = props.attributes.content,
+        setAttributes = props.setAttributes,
+        className = props.className;
+    var blockProps = useBlockProps();
+
+    var onChangeContent = function onChangeContent(newContent) {
+      setAttributes({
+        content: newContent
+      });
+    };
+
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", _objectSpread(_objectSpread({
+      "class": "bg-navy"
+    }, blockProps), {}, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        "class": "bg-white bg-hero bg-no-repeat bg-left-top pt-98 pb-35 pl-60 max-w-360 mx-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          "class": "px-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InnerBlocks, {
+            allowedBlocks: 'core/list',
+            template: [['core/list', {
+              className: 'text-rows',
+              placeholder: 'Enter side content...'
+            }]],
+            templateLock: "all"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            "class": "flex items-end font-permanent-marker text-white text-[25px] max-w-184",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(RichText, {
+              tagName: "p",
+              placeholder: "Content goes here",
+              onChange: onChangeContent,
+              value: content
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+              "class": "down-arrow bg-no-repeat bg-contain w-5 h-7 flex-none ml-2 mb-1 animate-bounce"
+            })]
+          })]
+        })
+      })
+    }));
+  },
+  save: function save(props) {
+    var blockProps = useBlockProps.save();
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", _objectSpread(_objectSpread({
+      "class": "bg-navy"
+    }, blockProps), {}, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        "class": "bg-white bg-hero bg-no-repeat bg-left-top pt-98 pb-35 pl-60 max-w-360 mx-auto",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+          "class": "px-8",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(InnerBlocks.Content, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            "class": "flex items-end font-permanent-marker text-white text-[25px] max-w-184",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(RichText.Content, {
+              tagName: "p",
+              value: props.attributes.content
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+              "class": "down-arrow bg-no-repeat bg-contain w-5 h-7 flex-none ml-2 mb-1 animate-bounce"
+            })]
+          })]
+        })
+      })
+    }));
+  }
+});
 
 /***/ }),
 
@@ -760,45 +817,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	} else {}
 }());
-
-
-/***/ }),
-
-/***/ "./assets/sass/app.scss":
-/*!******************************!*\
-  !*** ./assets/sass/app.scss ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./assets/sass/editor.scss":
-/*!*********************************!*\
-  !*** ./assets/sass/editor.scss ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./assets/sass/fonts.scss":
-/*!********************************!*\
-  !*** ./assets/sass/fonts.scss ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
 
 
 /***/ }),
@@ -4538,42 +4556,7 @@ if (false) {} else {
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -4614,72 +4597,109 @@ if (false) {} else {
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/assets/dist/js/blocks": 0,
-/******/ 			"assets/dist/css/fonts": 0,
-/******/ 			"assets/dist/css/editor": 0,
-/******/ 			"assets/dist/css/app": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkideas42"] = self["webpackChunkideas42"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/dist/css/fonts","assets/dist/css/editor","assets/dist/css/app"], () => (__webpack_require__("./assets/js/blocks/blocks.jsx")))
-/******/ 	__webpack_require__.O(undefined, ["assets/dist/css/fonts","assets/dist/css/editor","assets/dist/css/app"], () => (__webpack_require__("./assets/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/dist/css/fonts","assets/dist/css/editor","assets/dist/css/app"], () => (__webpack_require__("./assets/sass/editor.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/dist/css/fonts","assets/dist/css/editor","assets/dist/css/app"], () => (__webpack_require__("./assets/sass/fonts.scss")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!*************************************!*\
+  !*** ./assets/js/blocks/blocks.jsx ***!
+  \*************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./container */ "./assets/js/blocks/container.jsx");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ "./assets/js/blocks/header.jsx");
+/* harmony import */ var _spacer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./spacer */ "./assets/js/blocks/spacer.jsx");
+/* harmony import */ var _fontFamily__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fontFamily */ "./assets/js/blocks/fontFamily.jsx");
+/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout */ "./assets/js/blocks/layout.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+/**
+ * External Dependencies
+ */
+
+
+
+
+
+/**
+ * WordPress Dependencies
+ */
+
+
+
+var addFilter = wp.hooks.addFilter;
+var Fragment = wp.element.Fragment;
+var createHigherOrderComponent = wp.compose.createHigherOrderComponent;
+/**
+ * Add custom attribute for mobile visibility.
+ *
+ * @param {Object} settings Settings for the block.
+ *
+ * @return {Object} settings Modified settings.
+ */
+
+function addAttributes(settings) {
+  (0,_fontFamily__WEBPACK_IMPORTED_MODULE_3__.addFontFamilyAttrs)(settings);
+  (0,_layout__WEBPACK_IMPORTED_MODULE_4__.addLayouts)(settings);
+  console.log(settings);
+  return settings;
+}
+/**
+ * Add custom controls on Block Panel.
+ *
+ * @param {function} BlockEdit Block edit component.
+ *
+ * @return {function} BlockEdit Modified block edit component.
+ */
+
+
+var withInspectorControl = createHigherOrderComponent(function (BlockEdit) {
+  return function (props) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(BlockEdit, _objectSpread({}, props)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_fontFamily__WEBPACK_IMPORTED_MODULE_3__.FontFamilyBlockEdit, _objectSpread({}, props)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_layout__WEBPACK_IMPORTED_MODULE_4__.LayoutBlockEdit, _objectSpread({}, props))]
+    });
+  };
+}, "withInspectorControl");
+/**
+ * Add custom element class in save element.
+ *
+ * @param {Object} props     Block element.
+ * @param {Object} blockType      Blocks object.
+ * @param {Object} attributes     Blocks attributes.
+ *
+ * @return {Object} extraProps Modified block element.
+ */
+
+function applyExtraClass(props, blockType, attributes) {
+  (0,_fontFamily__WEBPACK_IMPORTED_MODULE_3__.applyFontFamilyClass)(props, blockType, attributes);
+  (0,_layout__WEBPACK_IMPORTED_MODULE_4__.applyLayoutsStyles)(props, blockType, attributes);
+  return props;
+}
+/**
+ * Add size class to the block in the editor
+ */
+
+
+var addExtraClass = createHigherOrderComponent(function (BlockListBlock) {
+  return function (props) {
+    (0,_fontFamily__WEBPACK_IMPORTED_MODULE_3__.addFontFamilyClass)(props);
+    (0,_layout__WEBPACK_IMPORTED_MODULE_4__.addLayoutClass)(props);
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(BlockListBlock, _objectSpread(_objectSpread({}, props), {}, {
+      wrapperProps: props
+    }));
+  };
+}, "withMyWrapperProp"); //add filters
+
+addFilter("blocks.registerBlockType", "nclud/custom-attributes", addAttributes);
+addFilter("editor.BlockEdit", "nclud/custom-advanced-control", withInspectorControl);
+addFilter("editor.BlockListBlock", "nclud/add-extra-class", addExtraClass);
+addFilter("blocks.getSaveContent.extraProps", "nclud/apply-extra-class", applyExtraClass);
+})();
+
 /******/ })()
 ;
