@@ -77,6 +77,10 @@
 	.flex-1 {
 		flex: 1;
 	}
+
+	.w-fit-content {
+		width: fit-content !important;
+	}
 }
 .inline-block {
 	display: inline-block;
@@ -104,6 +108,9 @@
 	.wp-block-media-text__content {
 		padding: 0 !important;
 	}
+}
+.wp-block-button__link {
+	font-weight: 600;
 }
 
 @media (max-width: 781px) {
